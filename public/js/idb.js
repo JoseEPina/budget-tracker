@@ -45,7 +45,7 @@ function saveRecord(record) {
 
 function uploadTransaction() {
    // open a transation on your db
-   const transaction = db.transaction(['new_transaction', 'readwrite']);
+   const transaction = db.transaction(['new_transaction'], 'readwrite');
 
    // access your object store for 'new_transaction'
    const budgetObjectStore = transaction.objectStore('new_transaction');
@@ -58,7 +58,7 @@ function uploadTransaction() {
       //* if there was data in indexedDb's store,
       //* let's send it to the api server
       if (getAll.result.length > 0) {
-         fetch('/api/transaction', {
+         fetch('/api/transaction/bulk', {
             method: 'POST',
             body: JSON.stringify(getAll.result),
             headers: {
