@@ -39,7 +39,7 @@ THEN the deposits or expenses added while they were offline are added to their t
 
 ![Example-01](./public/images/demo_budget.png)
 
-![Example-01](./public/images/mobile.png.png)
+![Example-01](./public/images/mobile.png)
 
 ## Project URLs
 
